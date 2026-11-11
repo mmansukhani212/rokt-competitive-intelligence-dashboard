@@ -30,7 +30,7 @@ a { color: inherit; text-decoration: none; }
 ::selection { color: #ffffff; background: #2b5dc8; }
 .app-shell { min-height: 100vh; display: flex; background: var(--canvas); }
 .sidebar { width: var(--sidebar-width); position: fixed; inset: 0 auto 0 0; z-index: 30; display: flex; flex-direction: column; padding: 23px 15px 14px; background: #15283f; border-right: 1px solid #2d3b4c; }
-.brand-lockup { height: 48px; flex: 0 0 48px; display: flex; align-items: center; gap: 16px; padding: 0; }
+.brand-lockup { height: 48px; flex: 0 0 48px; display: flex; align-items: center; gap: 16px; padding: 0 12px; }
 .brand-mark { width: 22px; height: 22px; flex: 0 0 auto; color: #7dbad0; }
 .brand-name { color: #f4f7fb; font-size: 17px; line-height: 1; font-weight: 700; letter-spacing: -.025em; }
 .main-nav { margin-top: 6px; display: grid; gap: 3px; }
