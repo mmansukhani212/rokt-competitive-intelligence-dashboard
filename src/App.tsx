@@ -37,6 +37,7 @@ const riskColors: Record<RiskLevel, string> = {
 }
 
 const HUBSPOT_RECORD_URL = 'https://app-na2.hubspot.com/contacts/247811175/record/0-3/364458171069/'
+const GONG_LOGIN_URL = 'https://app.gong.io/welcome/login'
 const CHART_TOOLTIP_CONTENT: React.CSSProperties = { backgroundColor: '#ffffff', border: '1px solid #dfe6ee', borderRadius: 10, boxShadow: '0 12px 30px #21324a12', padding: '8px 10px', fontSize: 12 }
 const CHART_TOOLTIP_LABEL: React.CSSProperties = { color: '#65778d', fontWeight: 650, marginBottom: 3 }
 const CHART_TOOLTIP_ITEM: React.CSSProperties = { color: '#334b66', fontSize: 12 }
@@ -378,12 +379,12 @@ function QuestionnaireDrawer({ formId, onClose }: { formId: string; onClose: () 
   }
   return <div className="drawer-backdrop" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
     <aside className="detail-drawer review-drawer" role="dialog" aria-modal="true" aria-labelledby="form-title">
-      <div className="drawer-topline"><span>HUBSPOT DEMO FORM</span><button className="icon-button" aria-label="Close review" onClick={onClose}><X size={18} /></button></div>
+      <div className="drawer-topline"><span>COMPETITOR MENTION FORM</span><button className="icon-button" aria-label="Close review" onClick={onClose}><X size={18} /></button></div>
       <div className="review-heading"><div><div className="eyebrow">AM VALIDATION · {form.id.toUpperCase()}</div><h2 id="form-title">{isAutoSubmitted ? 'Review auto-submitted form' : 'Verify this mention'}</h2><p>{isAutoSubmitted ? 'Check for missed or incorrect details, then update the shared form.' : 'Confirm the conversation details before they enter shared reporting.'}</p></div><span className="deadline-pill"><Clock3 size={14} />{isAutoSubmitted ? 'Auto-submitted' : countdown + ' left'}</span></div>
       {isAutoSubmitted && <div className="auto-submitted-note"><Zap size={15} /><p>This form was submitted automatically after the three-day review window. Your corrections will replace the original details in shared intelligence.</p></div>}
       <form onSubmit={submit} className="review-form">
         <div className="form-section">
-          <div className="form-section-title"><span>01</span><div><h3>Account information</h3><p>Matched from the call recording</p></div></div>
+          <div className="form-section-title"><span>01</span><div><h3>Account information</h3><p>Matched from the call recording</p></div><a className="button button-secondary button-small gong-recording-link" href={GONG_LOGIN_URL} target="_blank" rel="noreferrer">Gong Call Recording <ExternalLink size={12} /></a></div>
           <div className="form-grid">
             <label>Account name<input value={account.name} readOnly /></label>
             <label>Account manager<input value={owner?.name || 'Alex Morgan'} readOnly /></label>

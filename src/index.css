@@ -422,6 +422,7 @@ a { color: inherit; text-decoration: none; }
 .review-form { padding-bottom: 13px; }
 .form-section { padding: 14px 0; border-bottom: 1px solid #dfe6ee; }
 .form-section-title { margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.gong-recording-link { margin-left: auto; }
 .form-section-title > span { width: 24px; height: 24px; flex: 0 0 auto; border-radius: 7px; display: grid; place-items: center; color: #2b5dc8; background: #e8effd; font-size: 8.8px; font-weight: 700; }
 .form-section-title h3 { margin: 0; color: #334b66; font-size: 9.9px; font-weight: 650; text-transform: capitalize; }
 .form-section-title p { margin: 3px 0 0; color: #8997a8; font-size: 7.7px; }
